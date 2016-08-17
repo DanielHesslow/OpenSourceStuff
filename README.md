@@ -1,6 +1,6 @@
 #OpenSourceStuff
 
-This is a repository where I gather small usefull functions that I've decided to realase for free, currently only involving DH_memset_32.
+This is a repository where I gather small usefull functions of mine that I've decided to realase for free, currently only involving DH_memset_32.
 
 ### DH_memset_32
 DH_memset_32 is a fast implementation of memset for 4 byte values.
