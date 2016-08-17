@@ -11,6 +11,9 @@ On my machene my implementation is actually faster than the default memset on bo
 Why not accept 8 byte values as well?
 It probably should but I haven't had the need for one so I havn't written it. I might though.
 
+Why did I need a fast 4 byte memset?
+I'm currently working on a software rendendered texteditor. If we want to set a block to some color (ig. background) we need to have a fast memset, if that color isn't grayscale it needs to accept 4 byte values.
+
 ##Liscense for everything in this repository is:
   This software is dual-licensed to the public domain and under the following
   license: you are granted a perpetual, irrevocable license to copy, modify,
