@@ -6,13 +6,13 @@ This is a repository where I gather small usefull functions of mine that I've de
 DH_memset_32 is a fast implementation of memset for 4 byte values.
 Letting memset accept integer values is totally reasonable, its less limiting and doesn't cost anything.
 
-On my machene my implementation is actually faster than the default memset on both clang and msvc, more than twice as fast in certain ranges and never slower. 
+On my machene my implementation is actually *faster* than the default memset on both clang and msvc (havn't tested on gcc), more than twice as fast in certain ranges and never slower. 
 
-Why not accept 8 byte values as well?
+**Why not accept 8 byte values as well?**
 It probably should but I haven't had the need for one so I havn't written it. I might though.
 
-Why did I need a fast 4 byte memset?
-I'm currently working on a software rendendered texteditor. If we want to set a block to some color (ig. background) we need to have a fast memset, if that color isn't grayscale it needs to accept 4 byte values.
+**Why did I need a fast 4 byte memset?**
+I'm currently working on a software rendendered texteditor. If we want to set a block to some color (eg. background) we need to have a fast memset, if that color isn't grayscale it needs to accept 4 byte values.
 
 ##Liscense for everything in this repository is:
   This software is dual-licensed to the public domain and under the following
