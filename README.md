@@ -11,7 +11,7 @@ On my machene my implementation is actually *faster* than the default memset on 
 **Why not accept 8 byte values as well?**
 It probably should but I haven't had the need for one so I havn't written it. I might though.
 
-**Why did I need a fast 4 byte memset?**
+**Why did you need a fast 4 byte memset?**
 I'm currently working on a software rendendered texteditor. If we want to set a block to some color (eg. background) we need to have a fast memset, if that color isn't grayscale it needs to accept 4 byte values.
 
 ##Liscense for everything in this repository is:
@@ -21,7 +21,7 @@ I'm currently working on a software rendendered texteditor. If we want to set a 
   
   
   
-##Who am I?
+##Who are you?
   
   I'm a university student at Chalmers University of Technology in Sweden. When I get too bored with java design patterns and other 'useful' stuff we have to do in school I usually do some c programming.
   
