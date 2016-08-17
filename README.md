@@ -20,7 +20,7 @@ It probably should but I haven't had the need for one so I havn't written it. I 
   
 ##Who am I?
   
-  I'm a university student at Chalmers University of Technology. When I get too bored with java design patterns and other 'useful' stuff we have to do in school I usually do some c programming.
+  I'm a university student at Chalmers University of Technology in Sweden. When I get too bored with java design patterns and other 'useful' stuff we have to do in school I usually do some c programming.
   
 ##Why should I trust some collage student that he can write correct code?
  You probably shouldn't at least not if something is depending on it. Verify that the implimentation is correct youself. 
