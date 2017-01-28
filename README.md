@@ -1,12 +1,16 @@
 #OpenSourceStuff
 
-This is a repository where I gather small usefull functions of mine that I've decided to realase for free, currently only involving DH_memset_32.
+This is a repository where I gather small usefull functions of mine that I've decided to realase for free, currently involving DH_memset_32, and example code for using raw_input on windows.
+
+
+### raw_input_example.cpp
+Is just some small example code of how to use raw_input on windows to get left/right -control/-alt/-shift/-enter, listning to keypresses in the background and getting out the unicode characters (without going through WM_UNICODE). I actually think using raw_input results in  code that is slightly cleaner that handeling all WM_CHAR,WM_UNICODE,WM_KEY,WM_SYSKEY ... (and maybe even GetKeyBoardState GetKey GetKeyAsync) etc...  
 
 ### DH_memset_32
 DH_memset_32 is a fast implementation of memset for 4 byte values.
 Letting memset accept integer values is totally reasonable, its less limiting and doesn't cost anything.
 
-On my machene my implementation is actually *faster* than the default memset on both clang and msvc (havn't tested on gcc), more than twice as fast in certain ranges and never slower. 
+On my machene my implementation is actually *faster* than the default memset on both clang and msvc (havn't tested on gcc), more than twice as fast in certain ranges and never slower. This is beacuse we don't need to set the final values since we're allways setting whole 4 bytes. Which saves a couple of instructions and reduces branches slightly. Memset is also memory bound so it's not hard to make fast.
 
 **Why not accept 8 byte values as well?**
 It probably should but I haven't had the need for one so I havn't written it. I might though.
