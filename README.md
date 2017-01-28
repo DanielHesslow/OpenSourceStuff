@@ -5,9 +5,9 @@ This is a repository where I gather small usefull functions of mine that I've de
 
 
 ### DH_RingBuffer
-DH_RingBuffer is a fast fixed-size threadsafe and lock-free queue
-It can easily be modified to allow for dynamic sizing at the expence of the lock-free-ness.
-it would _probably_ not be too much of an overhead because it's an edgecase. 
+DH_RingBuffer is a fast fixed-size threadsafe and lock-free queue.
+
+It can easily be modified to allow for dynamic sizing at the expence of the lock-free-ness. it would _probably_ not be too much of an overhead because it's an edgecase. 
 
 
 ### DH_memset_32
