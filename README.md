@@ -3,8 +3,12 @@
 This is a repository where I gather small usefull functions of mine that I've decided to realase for free, currently involving DH_memset_32, and example code for using raw_input on windows.
 
 
-### raw_input_example.cpp
-Is just some small example code of how to use raw_input on windows to get left/right -control/-alt/-shift/-enter, listning to keypresses in the background and getting out the unicode characters (without going through WM_UNICODE). I actually think using raw_input results in  code that is slightly cleaner that handeling all WM_CHAR,WM_UNICODE,WM_KEY,WM_SYSKEY ... (and maybe even GetKeyBoardState GetKey GetKeyAsync) etc...  
+
+### DH_RingBuffer
+DH_RingBuffer is a fast fixed-size threadsafe and lock-free queue
+It can easily be modified to allow for dynamic sizing at the expence of the lock-free-ness.
+it would _probably_ not be too much of an overhead because it's an edgecase. 
+
 
 ### DH_memset_32
 DH_memset_32 is a fast implementation of memset for 4 byte values.
@@ -17,6 +21,12 @@ It probably should but I haven't had the need for one so I havn't written it. I 
 
 **Why did you need a fast 4 byte memset?**
 I'm currently working on a software rendendered texteditor. If we want to set a block to some color (eg. background) we need to have a fast memset, if that color isn't grayscale it needs to accept 4 byte values.
+
+
+### raw_input_example.cpp
+Is just some small example code of how to use raw_input on windows to get left/right -control/-alt/-shift/-enter, listning to keypresses in the background and getting out the unicode characters (without going through WM_UNICODE). I actually think using raw_input results in  code that is slightly cleaner that handeling all WM_CHAR,WM_UNICODE,WM_KEY,WM_SYSKEY ... (and maybe even GetKeyBoardState GetKey GetKeyAsync) etc...  
+
+
 
 ##Liscense for everything in this repository is:
   This software is dual-licensed to the public domain and under the following
