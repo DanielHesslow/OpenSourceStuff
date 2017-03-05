@@ -5,14 +5,14 @@ This is a repository where I gather small usefull functions of mine that I've de
 ### DH_HashTable
 DH_HashTable is a fast openadressed robinhood hashtable.
 
-## RobinHood hashtables as implemented here comes with the following set of characteristics
-# Pros
-  They're very, very fast.
-  They don't have degrading performance after insert and the removing an object.
-  They can be filled to a resonably high load factor without crippling the performance.
-# Cons
-  Some things does get slow with higher load factor ie. remove. This might be non-obvious, don't push it too high.
-  Copy from one hashtable to another of smaller size can be quadratic. See the Gotchas in the top of the file how to handle this.
+#### RobinHood hashtables as implemented here comes with the following set of characteristics
+##### Pros
+  * They're very, very fast.
+  * They don't have degrading performance after insert and the removing an object.
+  * They can be filled to a resonably high load factor without crippling the performance.
+#### Cons
+  * Some things does get slow with higher load factor ie. remove. This might be non-obvious, don't push it too high.
+  * Copy from one hashtable to another of smaller size can be quadratic. See the Gotchas in the top of the file how to handle this.
   
 DH_HashTable is a hashset, hashmap or multihashmap depending on defines. Ie one key can map to zero, one, or multiple values.
 DH_HashTable stores the hashes along with the keys and the values. This is a 4 byte overhead per entry but does significantly speed up the hashtable when the key equevalence function is slow.
