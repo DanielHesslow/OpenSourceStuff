@@ -10,6 +10,7 @@ DH_HashTable is a fast openadressed robinhood hashtable.
   * They're very, very fast.
   * They don't have degrading performance after insert and the removing an object.
   * They can be filled to a resonably high load factor without crippling the performance.
+  
 #### Cons
   * Some things does get slow with higher load factor ie. remove. This might be non-obvious, don't push it too high.
   * Copy from one hashtable to another of smaller size can be quadratic. See the Gotchas in the top of the file how to handle this.
