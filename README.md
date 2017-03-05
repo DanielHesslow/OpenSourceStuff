@@ -20,9 +20,10 @@ DH_HashTable stores the hashes along with the keys and the values. This is a 4 b
 
 DH_HashTable use the subset of C++ that I am confortable with. This means that there are no destructors or constructors called internally, the container does however expose a constructor externally but no destructor. To destroy it you must manually call the destroy function. I have not yet profiled the multimap or the set. The performance is unknown. The multimap is saves the key and hash for each value. Zero To Five values per key is about the size I had in mind while developing the multimap, for larger amount of keys you probably should store a linked list or dynamic array externally.
 
-Here are some benchmarks. I've used google_benchmark to get them. The google_dense is googles dense_hash_map, std is the msvcs version.
-Both of them used their default max_load_factor which is .5 for dense_hash_map and 1 for the std version (I should probably redo this with std at a lower loadfactor but I don't have the time at the moment. mine_80 is DH_HASHTABLE with a loadfactor of 0.80 and mine_90 at 0.90. To use it just define the mandatory defines stated at the top of the file and include it. No build steps, no nothing. Just include and it'll work. 
+To use it just define the mandatory defines stated at the top of the file and include it. No build steps, no nothing. Just include and it'll work. 
 
+Here are some benchmarks. I've used google_benchmark to get them. The google_dense is googles dense_hash_map, std is the msvcs version.
+Both of them used their default max_load_factor which is .5 for dense_hash_map and 1 for the std version (I should probably redo this with std at a lower loadfactor but I don't have the time at the moment. mine_80 is DH_HASHTABLE with a loadfactor of 0.80 and mine_90 at 0.90. Both keys and values in this examples are 32 bit integer. I expect to see larger difference with for example strings as keys.
 
 ![10xlookup,insert,remove](Pictures/10xinsert_remove_delete_per_sec.png)
 
