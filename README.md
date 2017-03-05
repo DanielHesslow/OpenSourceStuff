@@ -1,6 +1,36 @@
 #OpenSourceStuff
 
-This is a repository where I gather small usefull functions of mine that I've decided to realase for free, currently involving DH_memset_32, and example code for using raw_input on windows.
+This is a repository where I gather small usefull functions of mine that I've decided to realase for free, currently involving DH_memset_32, DH_RingBuffer, DH_HashTable and example code for using raw_input on windows.
+
+### DH_HashTable
+DH_HashTable is a fast openadressed robinhood hashtable.
+
+## RobinHood hashtables as implemented here comes with the following set of characteristics
+# Pros
+  They're very, very fast.
+  They don't have degrading performance after insert and the removing an object.
+  They can be filled to a resonably high load factor without crippling the performance.
+# Cons
+  Some things does get slow with higher load factor ie. remove. This might be non-obvious, don't push it too high.
+  Copy from one hashtable to another of smaller size can be quadratic. See the Gotchas in the top of the file how to handle this.
+  
+DH_HashTable is a hashset, hashmap or multihashmap depending on defines. Ie one key can map to zero, one, or multiple values.
+DH_HashTable stores the hashes along with the keys and the values. This is a 4 byte overhead per entry but does significantly speed up the hashtable when the key equevalence function is slow.
+
+DH_HashTable use the subset of C++ that I am confortable with. This means that there are no destructors or constructors called internally, the container does however expose a constructor externally but no destructor. To destroy it you must manually call the destroy function. I have not yet profiled the multimap or the set. The performance is unknown. The multimap is saves the key and hash for each value. Zero To Five values per key is about the size I had in mind while developing the multimap, for larger amount of keys you probably should store a linked list or dynamic array externally.
+
+Here are some benchmarks (that I used during the development).
+
+
+
+
+![10xlookup,insert,remove](Pictures/10xinsert_remove_delete_per_sec.png)
+
+![successful lookup](Pictures/successfull_lookups.png)
+
+![unsucessful lookup](Pictures/unsuccessfull_lookups.png)
+
+![insertions](Pictures/insertions.png)
 
 
 
