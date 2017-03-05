@@ -48,10 +48,6 @@
 */
 
 
-
-
-
-
 #ifndef MAX_NUM_ELEMENTS
 static_assert(false, "need to define 'MAX_NUM_ELEMENTS', the maximum number of elements the ringbuffer can hold");
 #else
