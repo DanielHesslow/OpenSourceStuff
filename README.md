@@ -1,4 +1,4 @@
-#OpenSourceStuff
+# OpenSourceStuff
 
 This is a repository where I gather small usefull functions of mine that I've decided to realase for free, currently involving DH_memset_32, DH_RingBuffer, DH_HashTable and example code for using raw_input on windows.
 
@@ -53,6 +53,11 @@ It probably should but I haven't had the need for one so I havn't written it. I 
 **Why did you need a fast 4 byte memset?**
 I'm currently working on a software rendendered texteditor. If we want to set a block to some color (eg. background) we need to have a fast memset, if that color isn't grayscale it needs to accept 4 byte values.
 
+**PROBABLY NOT GOOD**
+It's been a while and I've I believe on newer computers just using string instructions are faster, dont' fuck up the cache as much etc.
+
+
+
 
 ### raw_input_example.cpp
 Is just some small example code of how to use raw_input on windows to get left/right -control/-alt/-shift/-enter, listning to keypresses in the background and getting out the unicode characters (without going through WM_UNICODE). I actually think using raw_input results in  code that is slightly cleaner that handeling all WM_CHAR,WM_UNICODE,WM_KEY,WM_SYSKEY ... (and maybe even GetKeyBoardState GetKey GetKeyAsync) etc...  
@@ -68,7 +73,7 @@ Is just some small example code of how to use raw_input on windows to get left/r
   
 ##Who are you?
   
-  I'm a university student at Chalmers University of Technology in Sweden. When I get too bored with java design patterns and other 'useful' stuff we have to do in school I usually do some c programming.
+  I'm a university student at Chalmers University of Technology in Sweden. 
   
 ##Why should I trust some collage student that he can write correct code?
  You probably shouldn't at least not if something is depending on it. Verify that the implimentation is correct youself. 
