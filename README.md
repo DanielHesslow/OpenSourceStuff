@@ -18,7 +18,7 @@ DH_HashTable is a fast openadressed robinhood hashtable.
 DH_HashTable is a hashset, hashmap or multihashmap depending on defines. Ie one key can map to zero, one, or multiple values.
 DH_HashTable stores the hashes along with the keys and the values. This is a 4 byte overhead per entry but does significantly speed up the hashtable when the key equevalence function is slow.
 
-DH_HashTable use the subset of C++ that I am confortable with. This means that there are no destructors or constructors called internally, the container does however expose a constructor externally but no destructor. To destroy it you must manually call the destroy function. I have not yet profiled the multimap or the set. The performance is unknown. The multimap is saves the key and hash for each value. Zero To Five values per key is about the size I had in mind while developing the multimap, for larger amount of keys you probably should store a linked list or dynamic array externally.
+DH_HashTable uses a small subset of C++. This means that there are no destructors or constructors nor is there any templates. I have not yet profiled the multimap or the set. The performance is unknown. The multimap saves the key and hash for each value. Zero To Five values per key is about the size I had in mind while developing the multimap, for larger amount of keys you might be better off storing a linked list or dynamic array externally.
 
 To use it just define the mandatory defines stated at the top of the file and include it. No build steps, no nothing. Just include and it'll work. 
 
