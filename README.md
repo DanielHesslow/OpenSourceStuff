@@ -54,7 +54,7 @@ It probably should but I haven't had the need for one so I havn't written it. I 
 I'm currently working on a software rendendered texteditor. If we want to set a block to some color (eg. background) we need to have a fast memset, if that color isn't grayscale it needs to accept 4 byte values.
 
 **PROBABLY NOT GOOD**
-It's been a while and I've I believe on newer computers just using string instructions are faster, dont' fuck up the cache as much etc.
+It's been a while and I believe on newer computers just using string instructions are faster, dont' fuck up the cache as much etc.
 
 
 
